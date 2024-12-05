@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Projeto: Urna Eletrônica</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Projeto de urna eletrônica - 3UND - LT1">
+        <meta name="author" content="Hérson Rezende">
+
+        <link type="image/x-icon" rel="shortcut icon" href="images/icons/icon.png">
+        <link type="text/css" rel="stylesheet" href="styles/global.css">
+    </head>
+    <body>
+        <div class="container" id="container">
+            <nav>
+                <h1>Urna Eletrônica</h1>
+                
+                <div class="toggle">
+                    <input class="input-change-theme" id="switch" type="checkbox" name="theme">
+                    <label class="label-change-theme" for="switch">Theme</label>
+                </div>
+            </nav>
+
+            <div id="buttons-menu"></div>
+
+            <div id="informacoes"></div>
+
+            <div id="eleitor"></div>
+
+            <div id="div-ranking-extern"></div>
+
+            <audio id="efeito-sonoro-confirma" src="sounds/efeito-confirma.mp3" preload="auto"></audio>
+            <audio id="efeito-sonoro-click" src="sounds/efeito-click.mp3" preload="auto"></audio>
+        </div>
+        <script type="text/javascript" src="scripts/darkmode.js"></script>
+        <script type="text/javascript" src="dabatase/database.js"></script>
+        <script type="text/javascript" src="scripts/app.js"></script>
+    </body>
+</html>

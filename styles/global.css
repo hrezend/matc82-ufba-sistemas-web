@@ -1,0 +1,447 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html{
+    --bg: #FCFCFC;
+    --bg-panel: #EBEBEB;
+    --color-headings: #33CE55;
+    --color-text: #333333;
+    --bg2: #333333;
+    --bgPanel2: #434343;
+    --colorHeadings2: #23903B;
+    --colorText2: #B5B5B5;
+    --color-yellow: #ffc100;
+    --color-yellow2: #c09002;
+}
+
+body{
+    background-color: var(--bg-panel);
+
+    height: 100%;
+    align-items: center;
+    justify-items: center;
+
+    font-family: 'Montserrat';
+}
+
+button{
+    cursor: pointer;
+}
+.button-not-allowed{
+    cursor: not-allowed;
+}
+
+h1{
+    margin: 0;
+    color: var(--color-headings);
+    font-size: 30px;
+}
+
+nav{
+    background-color: var(--bg-panel);
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--color-headings);
+    padding-bottom: 5px;
+}
+
+
+.container{
+    background-color: var(--bg-panel);
+
+    padding: 20px;
+}
+
+.content{
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    border-radius: 15px;
+
+    margin-top: 30px;
+
+    align-items: center;
+    justify-items: center;
+    justify-content: space-evenly;
+}
+
+/*Inicio da estilizacao dos botoes do menu*/
+.buttons-menu{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.buttons-menu .button-votar{
+    background-color: var(--color-headings);
+    color: var(--bg);
+
+    font-size: 20px;
+
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    margin-right: 10px;
+}
+
+.buttons-menu .button-votar:hover{
+    opacity: 0.9;
+}
+
+.buttons-menu .button-estatisticas{
+    background-color: var(--color-text);
+    color: var(--bg);
+
+    font-size: 20px;
+
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.buttons-menu .button-estatisticas:hover{
+    opacity: 0.9;
+}
+/*fim*/
+
+.display{
+    background-color: var(--bg);
+    border-radius: 15px;
+
+    margin-top: 30px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-evenly;
+}
+
+.display .avatar{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+}
+
+.display .nome{
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-text);
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+.display .partido{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color-text);
+    line-height: 16px;
+    margin-top: 10px;
+}
+
+.teclado{
+    background-color: var(--bg);
+    border-radius: 15px;
+
+    margin-top: 30px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-evenly;
+}
+
+.teclado .display-numero input{
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--bg2);
+    text-align: center;
+    margin-bottom: 12px;
+    height: 40px;
+    font-size: 24px;
+}
+
+.btns-teclado .btns-numeros{
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.btns-teclado .btns-numeros button{
+    padding: 8px;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.btns-teclado .btns-opcoes button{
+    padding: 8px;
+    margin-left: 8px;
+    border: none;
+}
+
+.btns-teclado .btns-opcoes .btn-branco-voto{
+    background: #B5B5B5;
+}
+.btns-teclado .btns-opcoes .btn-branco-voto:hover{
+    opacity: 0.9;
+}
+
+.btns-teclado .btns-opcoes .btn-corrige-voto{
+    background: var(--color-yellow);
+}
+.btns-teclado .btns-opcoes .btn-corrige-voto:hover{
+    opacity: 0.9;
+}
+
+.btns-teclado .btns-opcoes .btn-confirma-voto{
+    background: var(--color-headings);
+}
+.btns-teclado .btns-opcoes .btn-confirma-voto:hover{
+    opacity: 0.9;
+}
+
+.button-submit-novo-voto{
+    cursor: pointer;
+    height: auto;
+    width: auto;
+}
+
+.div-ranking-extern{
+    display: flex;
+    flex-direction: column;
+}
+.ranking{
+    background-color: var(--bg);
+    border-radius: 15px;
+
+    width: 100%;
+
+    margin-top: 30px;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-around;
+}
+
+.ranking .avatar{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    margin-right: 40px;
+}
+
+.ranking .nome{
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-text);
+    line-height: 20px;
+    width: 500px;
+}
+
+.ranking .numero{
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-text);
+    line-height: 16px;
+    width: 50px;
+}
+
+.ranking .others{
+    font-size: 20px;
+    font-weight: normal;
+    color: var(--color-text);
+    line-height: 16px;
+    width: 200px;
+}
+
+/*inicio da estilizacao dos inputs do eleitor*/
+.eleitor{
+    background-color: var(--bg);
+    border-radius: 15px;
+
+    margin-top: 30px;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-evenly;
+}
+
+.eleitor input{
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--bg2);
+    text-align: center;
+
+    margin-right: 8px;
+}
+
+.eleitor button{
+    background-color: var(--color-headings);
+    color: var(--bg);
+
+    font-size: 14px;
+
+    padding: 4px;
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    margin-right: 10px;
+}
+
+.eleitor input:focus{
+    border: 2px solid var(--color-headings);
+}
+/*fim*/
+
+/*inicio da estilizacao do span de informacoes*/
+.informacoes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.span-message{
+    color: var(--color-text);
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 18px;
+    margin-top: 20px;
+}
+
+.span-instrucoes{
+    color: var(--color-text);
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 18px;
+    margin-top: 20px;
+}
+/*fim*/
+
+/*Input da mudança de tema dark/light*/
+.input-change-theme{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.label-change-theme{
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 52px;
+    height: 27px;
+    background: grey;
+    float: right;
+    border-radius: 100px;
+    position: relative;
+}
+
+.label-change-theme::after{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+.input-change-theme:checked + label{
+    background-color: var(--color-headings);
+}
+
+.input-change-theme:checked + label::after{
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+.label-change-theme:active:after{
+    width: 45px;
+}
+
+/*Esquemas responsivos*/
+@media screen and (max-width: 600px){
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .display{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .display .avatar{
+        margin-bottom: 10px;
+    }
+    .display .nome{
+        margin-bottom: 10px;
+    }
+    .display .partido{
+        margin-bottom: 10px;
+    }
+    .eleitor{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .eleitor input + input{
+        margin-top: 10px;
+    }
+    .eleitor input + button{
+        margin-top: 20px;
+    }
+    .message{
+        margin-top: 20px;
+    }
+    .ranking{
+        flex-direction: column;
+    }
+    .ranking .avatar{
+        align-items: center;
+        margin-right: 0px;
+    }
+    .ranking .nome{
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .ranking .numero{
+        margin-top: 10px;
+        text-align: center;
+    }
+    .ranking .others{
+        margin-top: 10px;
+        text-align: center;
+    }
+}
