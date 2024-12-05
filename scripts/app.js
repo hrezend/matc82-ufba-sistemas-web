@@ -99,6 +99,8 @@ function montarDivDasInformacoes(info, condicao){
     var span = document.createElement("span");
     var span2 = document.createElement("span");
     var span3 = document.createElement("span");
+    var span4 = document.createElement("span");
+    var span5 = document.createElement("span");
 
     div.setAttribute("class", "informacoes");
 
@@ -111,12 +113,19 @@ function montarDivDasInformacoes(info, condicao){
     span3.setAttribute("class", "span-instrucoes");
     span3.setAttribute("id", "span-instrucoes3");
 
+    span4.setAttribute("class", "span-instrucoes");
+    span4.setAttribute("id", "span-instrucoes4");
+
     if(info == "" && condicao == "default"){
-        span.appendChild(document.createTextNode('Clique em "Novo Voto" para votar. Se você já votou, não poderá votar de novo. Vote consciente!'));
-        span2.appendChild(document.createTextNode('É possível ver a lista dos candidatos clicando em "Estatísticas".'));
+        span.appendChild(document.createTextNode('Clique em "Novo Voto" para votar.'));
+        span2.appendChild(document.createTextNode('Se você já votou, não poderá votar de novo.'));
+        span3.appendChild(document.createTextNode('É possível ver a lista dos candidatos clicando em "Estatísticas".'));
+        span4.appendChild(document.createTextNode('Vote consciente!'));
         
         div.appendChild(span);
         div.appendChild(span2);
+        div.appendChild(span3);
+        div.appendChild(span4);
     }
     else if(info != "" && condicao == ""){
         span.appendChild(document.createTextNode(info));
@@ -137,6 +146,7 @@ function desmontarDivDasInformacoes(){
     var span1 = document.getElementById("span-instrucoes");
     var span2 = document.getElementById("span-instrucoes2");
     var span3 = document.getElementById("span-instrucoes3");
+    var span4 = document.getElementById("span-instrucoes4");
 
     if(span1){
         document.getElementById("span-instrucoes").remove();
@@ -146,6 +156,9 @@ function desmontarDivDasInformacoes(){
     }
     if(span3){
         document.getElementById("span-instrucoes3").remove();
+    }
+    if(span4){
+        document.getElementById("span-instrucoes4").remove();
     }
 }
 
@@ -517,8 +530,8 @@ function handleButtonConfirma(){
 }
 
 function handleNomeNumeroDoTitulo(){
-    var inputNomeEleitor =  document.getElementById("nomeEleitor").value;
-    var inputNumeroDoTituloDoEleitor =  document.getElementById("numeroDoTituloDoEleitor").value;
+    var inputNomeEleitor = document.getElementById("nomeEleitor").value;
+    var inputNumeroDoTituloDoEleitor = document.getElementById("numeroDoTituloDoEleitor").value;
     var jaVotou = false;
 
     if(inputNomeEleitor == "" || inputNumeroDoTituloDoEleitor == ""){
@@ -529,7 +542,7 @@ function handleNomeNumeroDoTitulo(){
     }
     
     for(var i = 0; i < eleitores.length; i++){
-        if(eleitores[i].titulo == inputNumeroDoTituloDoEleitor){ //Duas pessoas podem ter o mesmo nome, MAS NÃO O MESMO TÍTULO
+        if(eleitores[i].titulo == inputNumeroDoTituloDoEleitor){ // Duas pessoas podem ter o mesmo nome, MAS NÃO O MESMO TÍTULO
             desmontarDivDeNovoVoto();
             montarDivDosBotoesDoMenu();
             montarDivDasInformacoes('Este eleitor já votou! Próximo...', "");

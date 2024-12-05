@@ -1,11 +1,4 @@
 database = [
-    {
-        "nome": "Alexandre da Costa e Silva Franco",
-        "partido": "PPP - Partido Dos Professores Programadores",
-        "numero": 10,
-        "quantidade_votos": 0,
-        "path_avatar": "images/avatars/alexandrecsf.jpg"
-    },
 	{
         "nome": "Jair Messias Bolsonaro",
         "partido": "S/P - Sem Partido",
