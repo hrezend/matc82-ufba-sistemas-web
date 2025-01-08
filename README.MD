@@ -1,5 +1,9 @@
 # Urna Eletrônica Digital
 
+## Equipe
+- Hérson Reis Rezende
+- Kennedy Anderson
+
 ## Como Executar o Programa Usando a Extensão Live Server do VSCode
 
 Para executar o programa recomendamos o uso do Visual Studio Code junto com a extensão Live Server, e a sequência dos seguintes passos:
